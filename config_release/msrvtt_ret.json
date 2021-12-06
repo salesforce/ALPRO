@@ -1,0 +1,44 @@
+{
+  "train_datasets": [
+    {
+      "name": "msrvtt",
+      "txt": "data/msrvtt_ret/txt/train.jsonl",
+      "img": "data/msrvtt_ret/videos"
+    }
+  ],
+  "val_datasets": [
+    {
+      "name": "msrvtt_retrieval",
+      "txt": "data/msrvtt_ret/txt/val.jsonl",
+      "img": "data/msrvtt_ret/videos"
+    }
+  ],
+  "max_txt_len": 40,
+  "crop_img_size": 224,
+  "resize_size": 256,
+  "img_pixel_mean": [0.48145466, 0.4578275, 0.40821073], 
+  "img_pixel_std": [0.26862954, 0.26130258, 0.27577711],
+  "img_input_format": "RGB",
+  "train_n_clips": 1,
+  "model_config": "config_release/base_model.json",
+  "tokenizer_dir": "ext/bert-base-uncased/",
+  "visual_model_cfg": "config_release/timesformer_divst_8x32_224_k600.json",
+  "e2e_weights_path": "output/pretrain/alpro_pretrained_ckpt.pt",
+  "num_frm": 8,
+  "train_batch_size": 8,
+  "val_batch_size": 8,
+  "gradient_accumulation_steps": 1,
+  "num_train_epochs": 5,
+  "min_valid_steps": 100,
+  "num_valid": 20,
+  "learning_rate": 2.5e-5,
+  "weight_decay": 1e-3,
+  "decay": "linear",
+  "optim": "adamw",
+  "betas": [0.9, 0.98],
+  "dropout": 0.1,
+  "grad_norm": 5.0,
+  "seed":42,
+  "fp16": 0,
+  "num_workers": 4
+}
