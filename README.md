@@ -1,23 +1,23 @@
 # ALPRO
 
-#### Align and Prompt: Video-and-Language Pre-training with Entity Prompts
+## Align and Prompt: Video-and-Language Pre-training with Entity Prompts
 
 [Dongxu Li](https://www.linkedin.com/in/dongxu-li-a8a035110/), [Junnan Li](https://sites.google.com/site/junnanlics), [Hongdong Li](http://users.cecs.anu.edu.au/~hongdong/), [Juan Carlos Niebles](http://www.niebles.net/), [Steven C.H. Hoi](https://sites.google.com/view/stevenhoi/home)
 
-Official PyTorch code for ALPRO. This repository supports pre-training on custom datasets, as well as finetuning on 
+Official PyTorch code for ALPRO. This repository supports pre-training as well as finetuning on 
 - Text-Video Retrieval on MSRVTT and DiDeMo.
 - Video Question Anwsering on MSRVTT and MSVD.
 
+<img src="pics/teaser.jpg" width="500">
 
 ## Requirements 
-Our scripts are tested on Ubuntu 20.04.1 with NVIDIA A100 GPUs. Supports for other platforms and hardwares are possible without warrant. To install the required packages:
+Our implementation is tested on Ubuntu 20.04.1 with NVIDIA A100 GPUs. Supports for other platforms and hardwares are possible with no warrant. To install the required packages:
 
 ```bash
 cd env && bash install_pkg.sh
 ```
 
-## Inference with Official Checkpoints
-### Data Preparation
+## Data Preparation
 1. Download Annotations and Pre-trained Checkpoints
     - [Text annotations](link-to-data.zip)
     - [Checkpoints of pre-trained model and finetuned model](link-to-output.zip)
@@ -92,18 +92,19 @@ cd env && bash install_pkg.sh
       |-src  # source code
       ```
 
-3. Inference on downstream tasks.
-    ```bash
-    cd run_scripts
-    bash inf_msrvtt_ret.sh
-    # {'text2video': {'r1': 33.9, 'r5': 60.7, 'r10': 73.2, 'medianR': 3.0, 'meanR': 27.404}}
-    bash inf_didemo_ret.sh
-    # {'text2video': {'r1': 35.9, 'r5': 67.5, 'r10': 78.8, 'medianR': 3.0, 'meanR': 19.125}}
-    bash inf_msrvtt_qa.sh
-    # {'ratios': {'what_ratio': [68.48, 49872], 'who_ratio': [27.99, 20385], 'how_ratio': [2.25, 1640], 'where_ratio': [0.34, 250], 'when_ratio': [0.93, 677]}, 'overall_acc': 42.12, 'what_acc': 36.05, 'who_acc': 52.24, 'how_acc': 85.67, 'where_acc': 42.8, 'when_acc': 78.88}
-    bash inf_msvd_qa.sh
-    # {'ratios': {'what_ratio': [61.93, 8150], 'who_ratio': [34.6, 4554], 'how_ratio': [2.81, 370], 'where_ratio': [0.21, 28], 'when_ratio': [0.44, 58]}, 'overall_acc': 45.91, 'what_acc': 37.02, 'who_acc': 58.59, 'how_acc': 81.62, 'where_acc': 46.43, 'when_acc': 72.41}
-    ```
+## Inference with Official Checkpoints
+
+  ```bash
+  cd run_scripts
+  bash inf_msrvtt_ret.sh
+  # {'text2video': {'r1': 33.9, 'r5': 60.7, 'r10': 73.2, 'medianR': 3.0, 'meanR': 27.404}}
+  bash inf_didemo_ret.sh
+  # {'text2video': {'r1': 35.9, 'r5': 67.5, 'r10': 78.8, 'medianR': 3.0, 'meanR': 19.125}}
+  bash inf_msrvtt_qa.sh
+  # {'ratios': {'what_ratio': [68.48, 49872], 'who_ratio': [27.99, 20385], 'how_ratio': [2.25, 1640], 'where_ratio': [0.34, 250], 'when_ratio': [0.93, 677]}, 'overall_acc': 42.12, 'what_acc': 36.05, 'who_acc': 52.24, 'how_acc': 85.67, 'where_acc': 42.8, 'when_acc': 78.88}
+  bash inf_msvd_qa.sh
+  # {'ratios': {'what_ratio': [61.93, 8150], 'who_ratio': [34.6, 4554], 'how_ratio': [2.81, 370], 'where_ratio': [0.21, 28], 'when_ratio': [0.44, 58]}, 'overall_acc': 45.91, 'what_acc': 37.02, 'who_acc': 58.59, 'how_acc': 81.62, 'where_acc': 46.43, 'when_acc': 72.41}
+  ```
 
 
 ## Downstream Task Finetuning
