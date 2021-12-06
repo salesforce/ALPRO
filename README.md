@@ -4,20 +4,20 @@
 
 [Dongxu Li](https://www.linkedin.com/in/dongxu-li-a8a035110/), [Junnan Li](https://sites.google.com/site/junnanlics), [Hongdong Li](http://users.cecs.anu.edu.au/~hongdong/), [Juan Carlos Niebles](http://www.niebles.net/), [Steven C.H. Hoi](https://sites.google.com/view/stevenhoi/home)
 
+<img src="pics/teaser.jpg" width="500">
+
 Official PyTorch code for ALPRO. This repository supports pre-training as well as finetuning on 
 - Text-Video Retrieval on MSRVTT and DiDeMo.
 - Video Question Anwsering on MSRVTT and MSVD.
 
-<img src="pics/teaser.jpg" width="500">
-
-## Requirements 
+## Requirements
 Our implementation is tested on Ubuntu 20.04.1 with NVIDIA A100 GPUs. Supports for other platforms and hardwares are possible with no warrant. To install the required packages:
 
 ```bash
 cd env && bash install_pkg.sh
 ```
 
-## Data Preparation
+## Data Preparation 
 1. Download Annotations and Pre-trained Checkpoints
     - [Text annotations](link-to-data.zip)
     - [Checkpoints of pre-trained model and finetuned model](link-to-output.zip)
@@ -164,7 +164,7 @@ cd env && bash install_pkg.sh
 1. Download [WebVid2M](https://github.com/m-bain/frozen-in-time) and [CC-3M](https://github.com/igorbrigadir/DownloadConceptualCaptions).
   
     - Put WebVid2M videos under `data/webvid2m`;
-    - we downsample webvid2m videos to 10% of the original FPS to speed-up video loading;
+    - 💡 we downsample webvid2m videos to 10% of the original FPS to speed-up video loading;
     - change `data/cc3m/txt/cc3m.json` with local image paths.
 
 2. Training Prompter:
