@@ -19,9 +19,9 @@ cd env && bash install_pkg.sh
 
 ## Data Preparation 
 1. Download Annotations and Pre-trained Checkpoints
-    - [Text annotations](link-to-data.zip)
-    - [Checkpoints of pre-trained model and finetuned model](link-to-output.zip)
-    - [Externel resources](link-to-ext.zip)
+    - [Text annotations](link-to-data.zip) (data.zip)
+    - [Checkpoints of pre-trained model and finetuned model](link-to-output.zip) (output.zip)
+    - [Externel resources](link-to-ext.zip) (ext.zip)
     - unzip `data.zip`, `output.zip`, `ext.zip` under `ALPRO/`.
  
 2. Download raw videos of downstream datasets.
