@@ -187,8 +187,8 @@ If you find ALPRO useful for your research, please consider citing:
   @inproceedings{li2021align,
     title={Align and Prompt: Video-and-Language Pre-training with Entity Prompts},
     author={Dongxu Li, Junnan Li, Hongdong Li, Juan Carlos Niebles, Steven C.H. Hoi},
-    booktitle={arxiv},
-    year={2021}
+    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+    year={2022}
   }
 ```
 
