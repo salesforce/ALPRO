@@ -1,5 +1,7 @@
 # ALPRO (CVPR 22')
 
+## ALPRO is now officially integrated into [LAVIS](https://github.com/salesforce/LAVIS), a one-stop library for language-vision intelligence!
+
 ## Align and Prompt: Video-and-Language Pre-training with Entity Prompts [[Paper](https://arxiv.org/abs/2112.09583)]
 
 [Dongxu Li](https://www.linkedin.com/in/dongxu-li-a8a035110/), [Junnan Li](https://sites.google.com/site/junnanlics), [Hongdong Li](http://users.cecs.anu.edu.au/~hongdong/), [Juan Carlos Niebles](http://www.niebles.net/), [Steven C.H. Hoi](https://sites.google.com/view/stevenhoi/home)
